@@ -1,0 +1,9 @@
+*.csv
+*.env
+.streamlit/secrets.toml
+package/
+*.zip
+lambda_build/
+package_serpapi/
+*.txt
+packages/
