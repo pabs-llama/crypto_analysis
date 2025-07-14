@@ -49,3 +49,45 @@ The Crypto Analysis Dashboard helps users:
 | **SQLAlchemy** | Database integration |
 
 ---
+## Project Structure
+
+crypto_analysis/
+│
+├── .streamlit/ # Streamlit configuration
+│ └── secrets.toml
+│
+├── app/ # Streamlit frontend app
+│ └── streamlit_app.py
+│
+├── aws/ # AWS Lambda deployment code
+│ ├── update_api_table/
+│ │ ├── lambda_build/
+│ │ ├── update_api_table.py
+│ │ ├── update_api_table.zip
+│ └── update_ft_table/
+│ ├── package/
+│ ├── update_ft_table.py
+│ ├── update_ft_table.zip
+│ └── lambda_insert_crypto.zip
+│
+├── data/ # Raw and processed data files
+│ ├── Raw/
+│ └── Processed/
+│
+├── notebooks/ # Jupyter notebooks for exploration/dev
+│ ├── api.ipynb
+│ ├── financial_times_scrapping.ipynb
+│ ├── nlp_financial_sentiment.ipynb
+│ └── railway_connection.ipynb
+│
+├── src/ # Core backend and processing logic
+│ ├── init.py
+│ ├── get_api_data/
+│ ├── scrape_data/
+│ └── sentiment_analyzer/
+│
+├── .env # Environment variables (not tracked)
+├── .gitignore # Files and folders to exclude from Git
+├── LICENSE
+├── README.md
+└── requirements.txt # Python dependencies
